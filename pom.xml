@@ -12,9 +12,9 @@
 		<docker.image.prefix>kammana</docker.image.prefix>
 		<sonar.host.url>http://18.181.164.81:9000/</sonar.host.url>
 		<maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven-war-plugin.version>3.3.2</maven-war-plugin.version>
+		<maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
 	</properties>
 	
 	<dependencies>
@@ -28,38 +28,39 @@
 
 	</dependencies>
 	
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>${maven-war-plugin.version}</version>
-            </plugin>
-             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
-            </plugin>
-        </plugins>
-    </build>
-    <distributionManagement>
-		 <snapshotRepository>
-		    <id>nexusRepo</id>
-		    <url>http://34.208.218.12:8081/repository/sample-snapshots/</url>
-		 </snapshotRepository>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${maven-war-plugin.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexusRepo</id>
+			<url>http://34.208.218.12:8081/repository/sample-snapshots/</url>
+		</snapshotRepository>
 		
 		<repository>
-		    <id>nexusRepo</id>
-		    <url>http://44.202.251.20:8081/repository/flm-releases/</url>
+			<id>nexusRepo</id>
+			<url>http://44.202.251.20:8081/repository/flm-releases/</url>
 		</repository>
-  	</distributionManagement>
+	</distributionManagement>
 	
 	<pluginRepositories>
-	    <pluginRepository>    
-		<id>maven1</id>
-		<name>Maven.org</name>
-		<url>http://repo1.maven.org/maven2</url>
-	    </pluginRepository>
+		<pluginRepository>
+			<id>maven1</id>
+			<name>Maven.org</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</pluginRepository>
 	</pluginRepositories>
 
 </project>
